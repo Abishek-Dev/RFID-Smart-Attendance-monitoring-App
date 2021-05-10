@@ -14,12 +14,13 @@ public class DataModal {
     }
 
     // constructor for our object class.
-//    public DataModal(String Name, String RegisterNo,String date,Integer count) {
-//        this.Name = Name;
-//        this.RegisterNo = RegisterNo;
-//        this.date = date;
-//        this.count=count;
-//    }
+    public DataModal(String Name, String RegisterNo,String date,Integer count, String ClassandSec) {
+        this.Name = Name;
+        this.RegisterNo = RegisterNo;
+        this.date = date;
+        this.ClassandSec=ClassandSec;
+        this.count=count;
+    }
 
     // getter and setter methods
     public String getName() {
@@ -37,6 +38,7 @@ public class DataModal {
     public void setRegisterNo(String RegisterNo) {
         this.RegisterNo = RegisterNo;
     }
+
     public String getClassandSec() {
         return ClassandSec;
     }
