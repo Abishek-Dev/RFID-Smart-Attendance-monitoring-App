@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/school"
     android:padding="16dp"
     android:scrollbarThumbVertical="@null"
     tools:context=".register">
 
 
     <androidx.cardview.widget.CardView
-        xmlns:Card_View="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
         android:padding="10dp"
-        Card_View:cardCornerRadius="5dp"
-        Card_View:cardElevation="5dp">
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="415dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -43,7 +42,7 @@
                     android:inputType="textNoSuggestions"
                     android:maxLines="1"
                     android:paddingStart="5dp"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,9 +61,10 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:paddingStart="5dp"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/classError"
                 android:layout_width="match_parent"
@@ -77,12 +77,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="@string/classandsec"
-                    android:maxLength="12"
                     android:inputType="textNoSuggestions"
+                    android:maxLength="12"
                     android:maxLines="1"
                     android:paddingStart="5dp"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/phoneError"
                 android:layout_width="match_parent"
@@ -95,19 +96,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="@string/phone_number"
-                    android:maxLength="12"
                     android:inputType="number"
+                    android:maxLength="12"
                     android:maxLines="1"
                     android:paddingStart="5dp"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passError"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/password"
@@ -118,7 +119,7 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:paddingStart="5dp"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,10 +128,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
-                android:background="@drawable/button_gradient"
+                android:background="@drawable/shape"
                 android:text="@string/register"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/login"
@@ -140,8 +141,8 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="@string/not_register"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"/>
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
