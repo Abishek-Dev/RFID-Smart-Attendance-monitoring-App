@@ -22,7 +22,8 @@
         <activity android:name=".attendance"></activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".register" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
