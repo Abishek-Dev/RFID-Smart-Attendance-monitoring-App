@@ -54,7 +54,7 @@ public class attendance extends AppCompatActivity {
         // Create a instance of the database and get
         // its reference
         mbase
-                = FirebaseDatabase.getInstance().getReference("Attendance");
+                = FirebaseDatabase.getInstance().getReference("Attendance Log");
         Log.d("In", String.valueOf(mbase));
 
         recyclerView = findViewById(R.id.recycler1);
@@ -127,10 +127,11 @@ public class attendance extends AppCompatActivity {
                         pays.setCount(Integer.valueOf(snapshot.child("count").getValue().toString()));
                         pays.setRegisterNo(snapshot.child("RegisterNo").getValue().toString());
                         pays.setDate(snapshot.child("date").getValue().toString());
-                        pays.setClassandSec(snapshot.child("ClassandSec").getValue().toString());
+                        pays.setclassandSec(snapshot.child("classandSec").getValue().toString());
 
                         Log.d("User", "Name: " + pays.getName());
                         Log.d("User", "RegNo: " + pays.getRegisterNo());
+                        Log.d("User", "RegNo: " + pays.getclassandSec());
                         Log.d("User", "Date: " + pays.getDate());
 
                         paymentUsersList.add(pays);
@@ -159,7 +160,7 @@ public class attendance extends AppCompatActivity {
                 String id = String.valueOf(i + 1);
                 String name = pay.getName();
                 String registerNo = pay.getRegisterNo();
-                String classandsec = pay.getClassandSec();
+                String classandsec = pay.getclassandSec();
                 String count = String.valueOf(pay.getCount());
                 String date = pay.getDate();
                 String attend="";
@@ -187,10 +188,7 @@ public class attendance extends AppCompatActivity {
     }
 
     /*private void createUserReport(List<DataModal> paymentUsersList) throws FileNotFoundException, WriteException {
-
          paymentUsersList = new ArrayList<>();
-
-
         paymentUsersList.add(new DataModal(Name,"firstName1","middleName1",5));
         paymentUsersList.add(new DataModal("mr","firstName1","middleName1",8));
         paymentUsersList.add(new DataModal("mr","firstName1","middleName1",10));
@@ -201,20 +199,16 @@ public class attendance extends AppCompatActivity {
         sheet.addCell(new Label(1, 0, "RegisterNo"));
         sheet.addCell(new Label(2, 0, "Date"));
         //sheet.addCell(new Label(3, 0, "lastName"));
-
         for (int i = 0; i < paymentUsersList.size(); i++) {
             DataModal pay = paymentUsersList.get(i);
             String id = String.valueOf(i + 1);
             String name = pay.getName();
             String sname = pay.getRegisterNo();
             String phone = pay.getDate();
-
             Log.d("In loop of ", "createreport: " + sname);
-
             sheet.addCell(new Label(0, i + 1, name));
             sheet.addCell(new Label(1, i + 1, sname));
             sheet.addCell(new Label(2, i + 1, phone));
-
         }
     }*/
 

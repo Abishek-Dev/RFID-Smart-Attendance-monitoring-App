@@ -50,7 +50,7 @@ public class personAdapter extends FirebaseRecyclerAdapter<
             holder.count.setText("Present");
         }
         holder.date.setText(String.valueOf(model.getDate()));
-        holder.classandsec.setText(String.valueOf(model.getClassandSec()));
+        holder.classandsec.setText(String.valueOf(model.getclassandSec()));
         //holder.count.setText(String.valueOf(model.getCount()));
     }
 

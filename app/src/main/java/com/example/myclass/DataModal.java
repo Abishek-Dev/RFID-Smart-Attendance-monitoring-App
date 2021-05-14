@@ -5,7 +5,7 @@ public class DataModal {
     // variables for storing our image and name.
     private String Name;
     private String RegisterNo;
-    private String ClassandSec;
+    private String classandSec;
     private String date;
     private Integer count;
 
@@ -14,11 +14,11 @@ public class DataModal {
     }
 
     // constructor for our object class.
-    public DataModal(String Name, String RegisterNo,String date,Integer count, String ClassandSec) {
+    public DataModal(String Name, String RegisterNo,String date,Integer count, String classandSec) {
         this.Name = Name;
         this.RegisterNo = RegisterNo;
         this.date = date;
-        this.ClassandSec=ClassandSec;
+        this.classandSec=classandSec;
         this.count=count;
     }
 
@@ -39,12 +39,12 @@ public class DataModal {
         this.RegisterNo = RegisterNo;
     }
 
-    public String getClassandSec() {
-        return ClassandSec;
+    public String getclassandSec() {
+        return classandSec;
     }
 
-    public void setClassandSec(String ClassandSec) {
-        this.ClassandSec = ClassandSec;
+    public void setclassandSec(String classandSec) {
+        this.classandSec = classandSec;
     }
     public String getDate() {
         return date;
